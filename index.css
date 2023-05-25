@@ -1,0 +1,126 @@
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  text-decoration: none;
+}
+
+body {
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: system-ui;
+  background: #e7eef7;
+}
+
+button {
+  cursor: pointer;
+  color: inherit;
+  font-family: inherit;
+}
+
+button:active,
+button:focus {
+  outline: 0;
+}
+
+.grid {
+  width: auto;
+  margin: auto;
+  /* margin-top: 5px; */
+  display: grid;
+  grid-column-gap: 4rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+.item {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.c-button {
+  display: inline-flex;
+  height: 8.8rem;
+  width: 8.8rem;
+  padding: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  border-radius: 2.4rem;
+  border: 0;
+  color: #3b6cad;
+  background: transparent;
+  position: relative;
+  box-shadow: 0.8rem 0.8rem 2.4rem #b4cff1, -0.8rem -0.8rem 2.4rem white,
+    -0.2rem -0.2rem 0.2rem white;
+  transition: all 120ms ease-out 0s;
+}
+
+.c-button:hover:before {
+  background: rgba(69, 218, 238, 0.24);
+}
+
+.c-button:before {
+  content: "";
+  position: absolute;
+  border-radius: 2.4rem;
+  inset: 0 0 0 0;
+  border: 2px solid transparent;
+  filter: blur(5px);
+  transition: all 120ms ease-out 0s;
+}
+
+.c-button--active {
+  background: linear-gradient(to top, #64a0f3, #3ab5f3);
+  box-shadow: inset 0.2rem 0.2rem 0.8rem #87aad7,
+    inset 0.8rem 0.8rem 1.6rem #aec5e4,
+    inset -0.4rem -0.4rem 0.8rem rgb(238, 54, 54), 2px 2px 2px #9bb8de,
+    -2px -2px 2px rgba(255, 255, 255, 0.7);
+}
+
+.c-button--active:before {
+  border-color: rgb(78, 170, 231);
+  box-shadow: 0px 0.4rem 1.6rem rgb(81, 166, 247);
+}
+
+.c-button--active:after {
+  box-shadow: inset 0px 0px 1.6rem rgb(56, 168, 233);
+}
+
+.c-button_icon {
+  filter: grayscale(40%) brightness(110%);
+  transition: all 120ms ease-out 0s;
+}
+
+.c-button_label {
+  filter: grayscale(20%) brightness(100%);
+  display: block;
+  /* color: black; */
+  margin-top: o.8rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  transition: all 120ms ease-out 0s;
+}
+
+a {
+  filter: grayscale(20%) brightness(100%);
+  display: block;
+  color: #ee0e0e;
+  transition: all 120ms ease-out 0s;
+  margin-top: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.u-text--red {
+  color: #f56565;
+}
+
+.u-text--blue {
+  color: #4299e1;
+}
+
+.u-text--green {
+  color: #48bb78;
+}
